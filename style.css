@@ -69,22 +69,7 @@ h2 {
   font-size: 1.1rem;
   line-height: 1.1;   /* tighter spacing */
 }
-.poem {
-  opacity: 0;
-  transform: translateY(20px);
-  animation: fadeUp 1.2s ease forwards;
-}
 
-.poems .poem:nth-of-type(2) {
-  animation-delay: 0.5s;
-}
-
-@keyframes fadeUp {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
 
 
 
