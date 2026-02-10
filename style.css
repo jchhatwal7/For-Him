@@ -32,3 +32,24 @@ h1 {
 p {
   font-size: 1.2rem;
 }
+
+.photos {
+  background: #ffffff;
+}
+
+h2 {
+  font-size: 1.6rem;
+  margin-bottom: 20px;
+}
+
+.photo-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.photo-grid img {
+  width: 100%;
+  border-radius: 14px;
+}
+
