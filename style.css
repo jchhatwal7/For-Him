@@ -69,9 +69,7 @@ h2 {
   font-size: 1.1rem;
 }
 
-.poem p {
-  white-space: pre-line;
-}
+
 .poem {
   opacity: 0;
   transform: translateY(20px);
@@ -89,6 +87,7 @@ h2 {
     transform: translateY(0);
   }
 }
+
 
 
 
