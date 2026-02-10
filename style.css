@@ -53,3 +53,20 @@ h2 {
   border-radius: 14px;
 }
 
+.poems {
+  background: #faf7f4;
+}
+
+.poem {
+  background: white;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 16px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.05);
+}
+
+.poem p {
+  font-size: 1.1rem;
+}
+
+
