@@ -67,7 +67,7 @@ h2 {
 
 .poem p {
   font-size: 1.1rem;
-  line-height: 1.4;   /* tighter spacing */
+  line-height: 1.1;   /* tighter spacing */
 }
 .poem {
   opacity: 0;
@@ -85,6 +85,7 @@ h2 {
     transform: translateY(0);
   }
 }
+
 
 
 
