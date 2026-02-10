@@ -67,8 +67,9 @@ h2 {
 
 .poem p {
   font-size: 1.1rem;
-  line-height: 1.1;   /* tighter spacing */
+  line-height: 0.1;   /* tighter spacing */
 }
+
 
 
 
