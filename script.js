@@ -1,52 +1,37 @@
 document.querySelectorAll(".letter").forEach(letter => {
   letter.addEventListener("click", () => {
-    letter.classList.toggle("open");
-  });
-});
 
-function createHeart() {
-  const heart = document.createElement("div");
-  heart.classList.add("heart");
-  heart.innerText = "❤️";
-
-  heart.style.left = Math.random() * 100 + "vw";
-  heart.style.fontSize = Math.random() * 10 + 18 + "px";
-
-  document.body.appendChild(heart);
-
-  setTimeout(() => {
-    heart.remove();
-  }, 4000);
-}
-
-setInterval(createHeart, 500);
-
-
-document.querySelectorAll(".letter").forEach(letter => {
-  letter.addEventListener("click", () => {
-
-    // toggle the letter open
+    // toggle open content
     letter.classList.toggle("open");
 
     // stop blinking
     const front = letter.querySelector(".letter-front");
     front.style.animation = "none";
 
-    // create multiple hearts randomly from letter
-    const rect = front.getBoundingClientRect(); // position of the button
-    for (let i = 0; i < 15; i++) { // more hearts
+    // generate hearts
+    const rect = front.getBoundingClientRect();
+    for (let i = 0; i < 15; i++) {
       const heart = document.createElement("div");
       heart.classList.add("burst-heart");
       heart.innerText = "💖";
 
-      // random position inside the letter-front
-      heart.style.left = rect.left + Math.random() * rect.width + "px";
-      heart.style.top = rect.top + Math.random() * rect.height + "px";
+      // random direction
+      const x = (Math.random() - 0.5) * 200 + "px"; // -100 to +100
+      const y = -(Math.random() * 200 + 50) + "px"; // -50 to -250 upward
 
-      document.body.appendChild(heart);
+      heart.style.left = front.offsetLeft + front.offsetWidth / 2 + "px";
+      heart.style.top = front.offsetTop + front.offsetHeight / 2 + "px";
+
+      heart.style.setProperty("--x", x);
+      heart.style.setProperty("--y", y);
+
+      letter.appendChild(heart);
 
       setTimeout(() => heart.remove(), 1500);
     }
 
   });
 });
+
+});
+
