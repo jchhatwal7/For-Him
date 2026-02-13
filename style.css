@@ -99,13 +99,14 @@ h2 {
   max-height: 0;
   overflow: hidden;
   padding: 0 20px;
-  transition: max-height 0.8s ease, padding 0.5s ease;
+  transition: max-height 1s ease, padding 0.5s ease;
 }
 
 .letter.open .letter-content {
-  max-height: 1000px;
+  max-height: 3000px; /* big enough to never cut */
   padding: 20px;
 }
+
 
 .heart {
   position: fixed;
@@ -142,6 +143,7 @@ h2 {
     opacity: 0;
   }
 }
+
 
 
 
