@@ -7,7 +7,7 @@ document.querySelectorAll(".letter").forEach(letter => {
 function createHeart() {
   const heart = document.createElement("div");
   heart.classList.add("heart");
-  heart.innerText = "🤍";
+  heart.innerText = "❤️";
 
   heart.style.left = Math.random() * 100 + "vw";
   heart.style.fontSize = Math.random() * 10 + 18 + "px";
@@ -19,4 +19,5 @@ function createHeart() {
   }, 4000);
 }
 
-setInterval(createHeart, 1500);
+setInterval(createHeart, 500);
+
