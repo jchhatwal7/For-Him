@@ -102,6 +102,20 @@ h2 {
   padding: 20px;
 }
 
+.heart {
+  position: fixed;
+  bottom: -20px;
+  animation: floatUp 4s linear forwards;
+  pointer-events: none;
+}
+
+@keyframes floatUp {
+  to {
+    transform: translateY(-110vh);
+    opacity: 0;
+  }
+}
+
 
 
 
