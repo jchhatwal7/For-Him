@@ -80,8 +80,13 @@ h2 {
   transition: transform 0.3s ease;
 }
 
-.letter:hover {
-  transform: scale(1.02);
+.letter {
+  background: white;
+  border-radius: 16px;
+  overflow: hidden;
+  margin-bottom: 20px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.05);
+  cursor: pointer;
 }
 
 .letter-front {
@@ -94,6 +99,10 @@ h2 {
   animation: blinkSoft 1.8s infinite;
 }
 
+@keyframes blinkSoft {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
 
 .letter-content {
   max-height: 0;
@@ -103,49 +112,22 @@ h2 {
 }
 
 .letter.open .letter-content {
-  max-height: 3000px; /* big enough to never cut */
+  max-height: 5000px; /* large enough for your full poem */
   padding: 20px;
 }
 
-
-.heart {
-  position: fixed;
-  bottom: -20px;
-  animation: floatUp 4s linear forwards;
-  pointer-events: none;
-}
-
-@keyframes floatUp {
-  to {
-    transform: translateY(-110vh);
-    opacity: 0;
-  }
-}
-
-@keyframes blinkSoft {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0.5; }
-}
+/* Hearts animation */
 .burst-heart {
-  position: fixed;
-  font-size: 40px;
+  position: absolute;
+  font-size: 30px;
   pointer-events: none;
   animation: burst 1.5s ease-out forwards;
 }
 
 @keyframes burst {
-  0% {
-    transform: scale(0.5);
-    opacity: 1;
-  }
-  100% {
-    transform: translateY(-150px) scale(1.5);
-    opacity: 0;
-  }
+  0% { transform: scale(0.5); opacity: 1; }
+  100% { transform: translateY(-150px) scale(1.5); opacity: 0; }
 }
-
-
-
 
 
 
