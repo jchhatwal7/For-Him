@@ -35,3 +35,23 @@ for (let i = 0; i < 15; i++) {
   });
 });
 
+// Floating hearts on page load
+function createFloatingHeart() {
+  const heart = document.createElement("div");
+  heart.classList.add("floating-heart");
+  heart.innerHTML = "❤️";
+
+  heart.style.left = Math.random() * 100 + "vw";
+  heart.style.fontSize = Math.random() * 20 + 20 + "px";
+  heart.style.animationDuration = Math.random() * 3 + 4 + "s";
+
+  document.body.appendChild(heart);
+
+  setTimeout(() => {
+    heart.remove();
+  }, 7000);
+}
+
+// Create hearts continuously
+setInterval(createFloatingHeart, 600);
+
