@@ -19,8 +19,9 @@ for (let i = 0; i < 15; i++) {
   const y = -(Math.random() * 200 + 50) + "px";  // upward
 
   // start at center of front button
-  heart.style.left = front.offsetLeft + front.offsetWidth / 2 + "px";
-  heart.style.top = front.offsetTop + front.offsetHeight / 2 + "px";
+heart.style.left = front.offsetWidth / 2 + "px";
+heart.style.top = front.offsetHeight / 2 + "px";
+
 
   // assign CSS variables for animation
   heart.style.setProperty("--x", x);
@@ -54,4 +55,5 @@ function createFloatingHeart() {
 
 // Create hearts continuously
 setInterval(createFloatingHeart, 600);
+
 
