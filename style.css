@@ -43,14 +43,17 @@ h2 {
 }
 
 .photo-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 12px;
+  display: flex;
+  flex-direction: column; /* STACK vertically */
+  gap: 20px;
+  align-items: center;
 }
 
 .photo-grid img {
-  width: 100%;
-  border-radius: 14px;
+  width: 90%;          /* nice mobile width */
+  max-width: 400px;    /* stops it being too big on laptop */
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
 }
 
 .poems {
@@ -143,6 +146,7 @@ h2 {
   width: 100%;
   border-radius: 14px;
 }
+
 
 
 
