@@ -143,14 +143,16 @@ h2 {
   position: fixed;
   bottom: -40px;
   pointer-events: none;
-  z-index: 1;
+  z-index: 5;   /* above background */
   animation: floatUp linear forwards;
 }
 
-section {
-  position: relative;
-  z-index: 2;
+
+body {
+  overflow-x: hidden;
 }
+
+
 @keyframes floatUp {
   from {
     transform: translateY(0);
@@ -161,6 +163,7 @@ section {
     opacity: 0;
   }
 }
+
 
 
 
