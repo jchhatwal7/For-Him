@@ -112,12 +112,19 @@ h2 {
 }
 
 .burst-heart {
-  position: absolute; /* relative to letter */
+  position: absolute;
   font-size: 30px;
   pointer-events: none;
+  z-index: 10;   /* ensure visible */
   opacity: 1;
   animation: floatHeart 1.5s ease-out forwards;
 }
+
+.letter {
+  position: relative;   /* IMPORTANT */
+  overflow: visible;    /* allow hearts to burst outside */
+}
+
 
 @keyframes floatHeart {
   0% {
@@ -163,6 +170,7 @@ body {
     opacity: 0;
   }
 }
+
 
 
 
